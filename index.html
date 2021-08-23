@@ -1,10 +1,18 @@
 <html>
 <head>
     <title>EeeGames</title>
+    <script>
+        function getLang() {
+            if (navigator.languages != undefined) return navigator.languages[0];
+            return navigator.language;
+        }
+    </script>
 </head>
 
 <body>
-    <h1>Welcome!</h1>
-    <a href="https://play.google.com/store/apps/developer?id=Eee+Games">Check out our apps.</a>
+    <script type="text/javascript">
+        if (getLang() == 'ko') window.location.href = '/ko/index.html';
+        else window.location.href = '/en/index.html';
+    </script>
 </body>
 </html>
