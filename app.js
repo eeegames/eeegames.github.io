@@ -5,9 +5,10 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    var langKor = req.acceptsLanguages('ko');
+    /*var langKor = req.acceptsLanguages('ko');
     if (langKor) res.redirect('/ko');
-    else res.redirect('/en');
+    else res.redirect('/en');*/
+    res.redirect('/ko');
 });
 
 app.get('/ko', (req, res) => {
