@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 const langs = ['ko', 'en'];
 const apps = ['gyedole', 'kudole', 'gongdole', 'musicgenerator', 'screenblacker', 'ballracer'];
 for (const l in langs) {
-    p = '/' + l;
+    var p = '/' + l;
     app.get(p, (req, res) => {
         res.sendFile(__dirname + '/index.html');
     });
