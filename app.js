@@ -22,12 +22,12 @@ for (var i = 0; i < langs.length; i++) {
         res.sendFile(__dirname + '/apps/appList.html');
     });
     p += '/';
-    for (const a in apps) {
-        app.get(p + a, (req, res) => {
-            res.sendFile(__dirname + '/apps/' + a + '/info.html');
+    for (var j = 0; j < apps.length; j++) {
+        app.get(p + apps[j], (req, res) => {
+            res.sendFile(__dirname + '/apps/' + apps[j] + '/info.html');
         });
-        app.get(p + a + '/privacy', (req, res) => {
-            res.sendFile(__dirname + '/apps/' + a + '/privacy.html');
+        app.get(p + apps[j] + '/privacy', (req, res) => {
+            res.sendFile(__dirname + '/apps/' + apps[j] + '/privacy.html');
         });
     }
 }
