@@ -6,8 +6,8 @@ var port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     var langKor = req.acceptsLanguages('ko');
-    if (langKor) res.sendFile(__dirname + '/index.html');
-    else res.sendFile(__dirname + '/en.html');
+    if (langKor) res.sendFile(__dirname + '/index_ko.html');
+    else res.sendFile(__dirname + '/index_en.html');
 });
 
 const langs = ['ko', 'en'];
