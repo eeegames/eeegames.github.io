@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 app.get('/ko', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
+app.get('/en', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
 
 const langs = ['ko', 'en'];
 const apps = ['gyedole', 'kudole', 'gongdole', 'musicgenerator', 'screenblacker', 'ballracer'];
