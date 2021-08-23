@@ -17,6 +17,7 @@ for (var i = 0; i < langs.length; i++) {
     app.get(p, (req, res) => {
         res.sendFile(__dirname + '/index.html');
     });
+    /*
     p += '/apps';
     app.get(p, (req, res) => {
         res.sendFile(__dirname + '/apps/appList.html');
@@ -30,6 +31,7 @@ for (var i = 0; i < langs.length; i++) {
             res.sendFile(__dirname + '/apps/' + apps[j] + '/privacy.html');
         });
     }
+    */
 }
 
 app.use(express.static(__dirname + '/app-ads.txt'));
