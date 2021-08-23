@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     /*var langKor = req.acceptsLanguages('ko');
     if (langKor) res.redirect('/ko');
     else res.redirect('/en');*/
-    res.redirect('https://www.google.com');
+    res.redirect('/ko');
 });
 
 app.get('/ko', (req, res) => {
