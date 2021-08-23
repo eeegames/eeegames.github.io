@@ -9,5 +9,6 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.static(__dirname + '/app-ads.txt'));
+app.use(express.static(__dirname + '/apps'));
 
 app.listen(port);
