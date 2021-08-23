@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 
 const langs = ['ko', 'en'];
 const apps = ['gyedole', 'kudole', 'gongdole', 'musicgenerator', 'screenblacker', 'ballracer'];
-for (var p in langs) {
-    p = '/' + p;
+for (const l in langs) {
+    p = '/' + l;
     app.get(p, (req, res) => {
         res.sendFile(__dirname + '/index.html');
     });
