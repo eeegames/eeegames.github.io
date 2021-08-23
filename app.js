@@ -10,13 +10,17 @@ app.get('/', (req, res) => {
     else res.redirect('/en');
 });
 
+app.get('/ko', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 const langs = ['ko', 'en'];
 const apps = ['gyedole', 'kudole', 'gongdole', 'musicgenerator', 'screenblacker', 'ballracer'];
 for (var i = 0; i < langs.length; i++) {
-    var p = '/' + langs[i];
+    /*var p = '/' + langs[i];
     app.get(p, (req, res) => {
         res.sendFile(__dirname + '/index.html');
-    });
+    });*/
     /*
     p += '/apps';
     app.get(p, (req, res) => {
